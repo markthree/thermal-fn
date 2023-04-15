@@ -1,13 +1,13 @@
 {
-  "version": "0.0.0",
-  "name": "name",
-  "description": "description",
+  "version": "0.0.1",
+  "name": "thermal-fn",
+  "description": "Persistence Cache Function | 持久化缓存函数",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/name/repo.git"
+    "url": "git+https://github.com/markthree/thermal-fn.git"
   },
   "exports": {
     ".": {
@@ -20,21 +20,10 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest",
     "build": "unbuild",
-    "build:deno": "udeno",
-    "build:esm": "mkdist -d",
-    "dev": "pnpm build:stub",
-    "play": "tsx src/index.ts",
-    "prepare": "husky install",
-    "test:watch": "vitest --watch",
-    "coverage": "vitest --coverage",
+    "bench": "node bench.mjs",
+    "dev": "pnpm unbuild --stub",
     "prepublishOnly": "pnpm build",
-    "build:stub": "pnpm build --stub",
-    "build:cjs": "mkdist -d --format=cjs",
-    "deps:fresh:major": "npx taze major -w",
-    "deps:fresh:minor": "npx taze minor -w",
-    "deps:fresh:patch": "npx taze patch -w",
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "keywords": [
@@ -44,25 +33,25 @@
     "utils"
   ],
   "author": {
-    "name": "name",
-    "email": "xx@xx.com",
-    "url": "https://github.com/name"
+    "name": "markthree",
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree"
   },
   "bugs": {
-    "email": "xx@xx.com",
-    "url": "https://github.com/name/repo/issues"
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree/thermal-fn/issues"
   },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.15.11",
     "bumpp": "^9.1.0",
-    "c8": "^7.13.0",
-    "husky": "^8.0.3",
-    "mkdist": "^1.2.0",
-    "tsx": "^3.12.6",
+    "exit-hook": "^3.2.0",
     "typescript": "^5.0.3",
-    "udeno": "^0.3.6",
-    "unbuild": "^1.2.0",
-    "vitest": "^0.29.8"
+    "unbuild": "^1.2.0"
+  },
+  "dependencies": {
+    "m-type-tools": "^0.4.1",
+    "ohash": "^1.0.0",
+    "unstorage": "^1.4.1"
   }
 }
