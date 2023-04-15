@@ -27,10 +27,9 @@
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "keywords": [
-    "lib",
-    "tool",
+    "persistence",
     "node",
-    "utils"
+    "fn"
   ],
   "author": {
     "name": "markthree",
