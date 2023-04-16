@@ -1,5 +1,5 @@
 {
-  "version": "0.0.4",
+  "version": "0.1.0",
   "name": "thermal-fn",
   "description": "Persistence Cache Function | 持久化缓存函数",
   "main": "./dist/index.cjs",
