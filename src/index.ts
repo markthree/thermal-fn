@@ -61,6 +61,7 @@ export async function useThermal(options: Options = {}) {
   async function refresh(key?: string) {
     if (key) {
       cache[key] = undefined;
+      return
     }
     cache = {}
   }
