@@ -1,6 +1,6 @@
 import { useThermal } from "./dist/index.mjs";
 
-const { invoke } = await useThermal("bench");
+const { invoke } = await useThermal();
 
 function largeComputing(boundary = 1000000000) {
   let i = 0;
